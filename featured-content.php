@@ -6,8 +6,9 @@
  * @subpackage gribble
  */
 ?>
-
 <hr />
+
+<strong>feature-content.php</strong>
 
 <div class="featured-content">
 

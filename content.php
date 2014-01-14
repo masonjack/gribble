@@ -7,6 +7,13 @@
  */
 ?>
 
+<?php
+
+// HEEEEEEEEYYYYYY! Use the ishomepage methods to work out how to display this goodness you dingus!
+
+?>
+
+
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
