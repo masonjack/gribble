@@ -46,11 +46,13 @@
 
        else : ?>
 
-                <div class="entry-summary">
+                <div class="entry-content">
                         <?php the_content(); ?> 
-                </div><!-- .entry-summary -->
+                </div>
 
                 <div class="clear"></div>
+
+                <?php comments_template() ?>
 
 <?php endif; ?>
 
