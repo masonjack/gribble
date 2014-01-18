@@ -22,18 +22,26 @@
                         <h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'expound' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
                 </header><!-- .entry-header -->
 
+                <?php 
+                   $post_date = the_date('', '<span class=\'date\'>', '</span>', FALSE);
+                   $post_date_formatted = str_replace(",", "", $post_date);
+                   echo $post_date_formatted;
+                ?>
+
 
 <?php if ( is_home() ) :
+
+                     echo "<div class=\"\">" . comments_number( '', '1', '%' ) . "</div>";
 
                      // prints contents of custom fields
                      $description = get_post_meta(get_the_ID(), "description", true);
                      if ($description !== "") :
-                        echo "DESCRIPTION: $description";
+                        echo "<div class=\"description\">$description</div>";
                      endif;
 
                      $quote = get_post_meta(get_the_ID(), "quote", true);
                      if ($quote !== "") :
-                        echo "QUOTE: $quote";
+                        echo "<div class=\"quote\">$quote</div>";
                      endif;
 
        else : ?>
