@@ -32,6 +32,7 @@
 <?php if ( is_home() ) :
 
                      echo "<div class=\"\">" . comments_number( '', '1', '%' ) . "</div>";
+                     comments_popup_link('0', '1', '%');
 
                      // prints contents of custom fields
                      $description = get_post_meta(get_the_ID(), "description", true);
