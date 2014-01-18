@@ -47,8 +47,7 @@
        else : ?>
 
                 <div class="entry-summary">
-                        <?php the_excerpt(); ?>
-                        <p><a class="button-primary" href="<?php the_permalink(); ?>"><?php _e( 'Continue reading &rarr;', 'expound' ); ?></a></p>
+                        <?php the_content(); ?> 
                 </div><!-- .entry-summary -->
 
                 <div class="clear"></div>
