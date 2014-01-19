@@ -7,9 +7,16 @@
  */
 ?>
 
+<?php if (is_search()) : ?>
+	<header class="page-header">
+		<h1 class="page-title">Search Results for <span><?php echo get_search_query() ?></span></h1>
+		<p>Your spelling is just horrible by the way.</p>
+	</header>
+<?php endif; ?>
+
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<?php if ( is_home() ) : ?>
+<?php if ( is_home() || is_search() ) : ?>
 
                 <?php if ( has_post_thumbnail() ) : ?>
                 <div class="entry-thumbnail">
@@ -29,11 +36,12 @@
                 ?>
 
 
-<?php if ( is_home() ) :
+<?php if ( is_home() || is_search() ) :
 
+		if (is_home()) :
                      echo "<div class=\"\">" . comments_number( '', '1', '%' ) . "</div>";
                      comments_popup_link('0', '1', '%');
-
+		endif;
                      // prints contents of custom fields
                      $description = get_post_meta(get_the_ID(), "description", true);
                      if ($description !== "") :
@@ -52,8 +60,9 @@
                 </div>
 
                 <div class="clear"></div>
-
-                <?php comments_template() ?>
+		if (is_home()) :
+                	<?php comments_template() ?>
+		endif;
 
 <?php endif; ?>
 
