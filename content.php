@@ -59,12 +59,17 @@
                         <?php the_content(); ?> 
                 </div>
 
-                <div class="clear"></div>
-		if (is_home()) :
-                	<?php comments_template() ?>
-		endif;
+		<div class="prev-and-next-links">
+			<?php previous_post_link("<div class='prev-link'>%link</div>"); ?>
+			<?php next_post_link("<div class='next-link'>%link</div>"); ?>
+		</div>
 
-<?php endif; ?>
+                <div class="clear"></div>
+			<?php		
+				if (!is_home() || !is_search()) :
+                			comments_template();
+				endif;
+	endif; ?>
 
         </article>
 
