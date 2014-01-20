@@ -29,10 +29,12 @@
                         <h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'expound' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
                 </header><!-- .entry-header -->
 
-                <?php 
-                   $post_date = the_date('', '<span class=\'date\'>', '</span>', FALSE);
-                   $post_date_formatted = str_replace(",", "", $post_date);
-                   echo $post_date_formatted;
+                <?php
+			if (get_post_type() === "post") :
+				$post_date = the_date('', '<span class=\'date\'>', '</span>', FALSE);
+				$post_date_formatted = str_replace(",", "", $post_date);
+				echo $post_date_formatted;
+			endif;
                 ?>
 
 
@@ -59,16 +61,17 @@
                         <?php the_content(); ?> 
                 </div>
 
-		<div class="prev-and-next-links">
-			<?php previous_post_link("<div class='prev-link'>%link</div>"); ?>
-			<?php next_post_link("<div class='next-link'>%link</div>"); ?>
-		</div>
+		<?php if (!is_home() && !is_search() && (get_post_type() === "post")) : ?>
+			<div class="prev-and-next-links">
+				<?php previous_post_link("<div class='prev-link'>%link</div>"); ?>
+				<?php next_post_link("<div class='next-link'>%link</div>"); ?>
+			</div>
 
-                <div class="clear"></div>
+                	<div class="clear"></div>
+
 			<?php		
-				if (!is_home() || !is_search()) :
-                			comments_template();
-				endif;
+                		comments_template();
+		endif;
 	endif; ?>
 
         </article>
