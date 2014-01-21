@@ -23,4 +23,19 @@
                         echo $link;
 		?>
 	</aside>
+
+	<aside>
+		<?php
+			$comments = get_comments();
+			foreach($comments as $comment) :
+				$post = get_post($comment->comment_post_ID);
+				$post_permalink = get_post_permalink($comment->comment_post_ID);
+
+				echo('<br /><a href="' . $post_permalink . '#comment-' . $comment->comment_ID . '">' . $post->post_title . '</a>' .
+					'<br />Comment by ' . $comment->comment_author . 
+					' at ' . $comment->comment_date .
+					'<br />' . $comment->comment_content);
+			endforeach;	
+		?>
+	</aside>
 </div>
