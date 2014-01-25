@@ -24,9 +24,21 @@
 		?>
 	</aside>
 
+        <aside>
+                <?php
+                        $page = get_page_by_title('Archives');
+
+                        $link = '<a href="' . get_page_link( $page->ID ) . '">';
+                        $link .= $page->post_title;
+                        $link .= '</a>';
+
+                        echo $link;
+                ?>
+        </aside>
+
 	<aside>
 		<?php
-			$comments = get_comments();
+			$comments = get_comments(array('number' => 5));
 			foreach($comments as $comment) :
 				$post = get_post($comment->comment_post_ID);
 				$post_permalink = get_post_permalink($comment->comment_post_ID);
@@ -56,4 +68,5 @@
 			endforeach;	
 		?>
 	</aside>
+
 </div>
