@@ -20,7 +20,7 @@
 
                 <?php if ( has_post_thumbnail() ) : ?>
                 <div class="entry-thumbnail">
-                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'expound-featured' ); ?></a>
+                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array(240, 180) ); ?></a>
                 </div>
                 <?php endif; ?>
 <?php endif; ?>
@@ -41,7 +41,6 @@
 <?php if ( is_home() || is_search() ) :
 
 		if (is_home()) :
-                     echo "<div class=\"\">" . comments_number( '', '1', '%' ) . "</div>";
                      comments_popup_link('0', '1', '%');
 		endif;
                      // prints contents of custom fields

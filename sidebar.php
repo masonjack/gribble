@@ -7,7 +7,7 @@
  */
 ?>
 
-<div class="sidebar">
+<div id="sidebar">
 	<aside>
 		<?php get_search_form(); ?>
 	</aside>

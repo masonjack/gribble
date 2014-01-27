@@ -21,5 +21,38 @@ Licensed under the GPL. You couldn't steal it if you wanted to
 }
 
 body {
-	font-family: Arial;
+	font: normal normal 14px/1.8em 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+	background-color: #333333;
+}
+
+.site {
+	width: 1020px;
+	margin: 40px auto;
+	background-color: white;
+}
+
+.site-main {
+        background-color: white;
+}
+
+#primary {
+	float: left;
+        background-color: white;
+	width: 80%;
+	padding: 10px;
+}
+
+#sidebar {
+	float: right;
+	width: 17%;
+        background-color: white;
+}
+
+.banner {
+	height: 200px;
+	padding: 20px;
+
+	background-image: url(images/toilet250px.jpg);
+        background-repeat: no-repeat;
+	background-position: right;
 }

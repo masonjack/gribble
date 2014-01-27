@@ -5,4 +5,6 @@
  * @subpackage Twenty_Fourteen
  */
 
+add_theme_support('post-thumbnails');
+
 ?>
