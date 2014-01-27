@@ -37,6 +37,7 @@
         </aside>
 
 	<aside>
+		<h1 class="widget-title">Recent Comments</h1>
 		<?php
 			$comments = get_comments(array('number' => 5));
 			foreach($comments as $comment) :
@@ -61,10 +62,10 @@
                                         $comment_content_excerpt = $comment_content;
                                 endif;
 
-				echo('<br /><a href="' . $post_permalink . '#comment-' . $comment->comment_ID . '">' . $post->post_title . '</a>' .
+				echo('<div class="sidebar-comment"><br /><a href="' . $post_permalink . '#comment-' . $comment->comment_ID . '">' . $post->post_title . '</a>' .
 					'<br />Comment by ' . $commenter_display . 
 					' at ' . $comment->comment_date .
-					'<br />"' . $comment_content_excerpt . '"');
+					'<br /><span class="sidebar-comment-quote">"' . $comment_content_excerpt . '"</span></div>');
 			endforeach;	
 		?>
 	</aside>

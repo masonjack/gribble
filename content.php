@@ -51,7 +51,7 @@
 
                      $quote = get_post_meta(get_the_ID(), "quote", true);
                      if ($quote !== "") :
-                        echo "<div class=\"quote\">$quote</div>";
+                        echo "<div class=\"quote\">\"$quote\"</div>";
                      endif;
 
        else : ?>
