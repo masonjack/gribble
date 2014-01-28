@@ -50,12 +50,21 @@ body {
 }
 
 .banner {
+	height: 240px;
+
+	background-image: url(images/toilet240px.png);
+/*
+        background-repeat: no-repeat;
+*/
+	background-position: right;
+}
+
+.banner-text-holder {
 	height: 200px;
 	padding: 20px;
-
-	background-image: url(images/toilet250px.jpg);
+	background-image: url(images/gradient_light_grey_to_trans.png);
         background-repeat: no-repeat;
-	background-position: right;
+        background-position: left;
 }
 
 article.post {
