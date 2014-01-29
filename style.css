@@ -23,11 +23,13 @@ Licensed under the GPL. You couldn't steal it if you wanted to
 body {
 	font: normal normal 14px/1.8em 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
 	background-color: #333333;
+	margin: 0px;
 }
 
 .site {
 	width: 1020px;
-	margin: 40px auto;
+	margin-left: auto;
+	margin-right: auto;
 	background-color: white;
 }
 
