@@ -52,21 +52,22 @@ body {
 }
 
 .banner {
-	height: 240px;
-
-	background-image: url(images/toilet240px.png);
-/*
-        background-repeat: no-repeat;
-*/
-	background-position: right;
+	height: 410px;
+	background-image: url(images/toilet_greyscale_410px.png);
 }
 
 .banner-text-holder {
-	height: 200px;
+	height: 390px;
 	padding: 20px;
-	background-image: url(images/gradient_light_grey_to_trans.png);
-        background-repeat: no-repeat;
-        background-position: left;
+}
+
+#site-title {
+	font-size: 75px;
+	text-align: center;
+}
+
+#site-description {
+	text-align: center;
 }
 
 article.post {
