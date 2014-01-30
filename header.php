@@ -34,7 +34,7 @@
 		<div id="page" class="hfeed site">
 			<header class="banner">
 				<div class="banner-text-holder">
-					<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" id="site-title-link" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 					<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 				</div>
