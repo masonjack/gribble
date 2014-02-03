@@ -27,9 +27,17 @@
 
                 <header class="entry-header">
                         <h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'expound' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-                </header><!-- .entry-header -->
+                
+			<?php
+                        	if (is_home()) :
+                                	echo "<div class='comment-counter'>";
+                                	comments_popup_link('0', '1', '%');
+                                	echo "</div>";
+                        	endif;
+			?>
+		</header><!-- .entry-header -->
 
-                <?php
+		<?php
 			if (get_post_type() === "post") :
 				$post_date = the_date('', '<span class=\'date\'>', '</span>', FALSE);
 				$post_date_formatted = str_replace(",", "", $post_date);
@@ -39,10 +47,6 @@
 
 
 <?php if ( is_home() || is_search() ) :
-
-		if (is_home()) :
-                     comments_popup_link('0', '1', '%');
-		endif;
                      // prints contents of custom fields
                      $description = get_post_meta(get_the_ID(), "description", true);
                      if ($description !== "") :

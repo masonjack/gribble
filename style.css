@@ -53,13 +53,12 @@ a:hover {
 }
 
 #primary {
-	float: left;
         background-color: #ddd;
-	width: 80%;
-	padding: 10px;
+	width: 100%;
 }
 
 #sidebar {
+	display: none;
 	float: right;
 	width: 17%;
         background-color: white;
@@ -101,6 +100,23 @@ article.post {
         background-color: white;
 	margin-bottom: 10px;
 	padding: 20px;
+	margin: 10px;
+	width: 450px;
+	float: left;
+}
+
+.entry-title {
+	margin-bottom: 0px;
+	display: inline;
+}
+
+.date {
+	color: #686868;
+	font-size: 12px;
+}
+
+.comment-counter {
+	float: right;
 }
 
 .quote {
