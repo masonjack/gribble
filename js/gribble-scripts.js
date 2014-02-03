@@ -5,6 +5,10 @@ $(document).ready(function(){
 
 	$(window).scroll(function(e){
 		var pos = $(window).scrollTop();
-		$('.banner').css("background-position", "0px " + pos + "px");
+		var backgroundPositions = $('.banner').css("background-position").split(" ");
+
+console.log("bg-pos: ", backgroundPositions[0]);
+
+		$('.banner').css("background-position", backgroundPositions[0] + " " + pos + "px");
 	});
 });
