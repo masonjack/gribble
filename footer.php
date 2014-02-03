@@ -9,7 +9,7 @@
 
       </div>
 
-      <?php get_sidebar( 'footer' ); ?>
+      <?php get_sidebar(); ?>
 
       <?php wp_footer(); ?>
 

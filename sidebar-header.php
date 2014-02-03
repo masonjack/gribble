@@ -7,22 +7,21 @@
  */
 ?>
 
-<div id="sidebar">
-	<aside>
-		<?php get_search_form(); ?>
-	</aside>
+        <aside>
+                <?php get_search_form(); ?>
+        </aside>
 
-	<aside>
-		<?php
-			$page = get_page_by_title('About this Site');
+        <aside>
+                <?php
+                        $page = get_page_by_title('About this Site');
 
                         $link = '<a href="' . get_page_link( $page->ID ) . '">';
                         $link .= $page->post_title;
                         $link .= '</a>';
 
                         echo $link;
-		?>
-	</aside>
+                ?>
+        </aside>
 
         <aside>
                 <?php
@@ -36,11 +35,10 @@
                 ?>
         </aside>
 
-	<aside>
-		<h1 class="widget-title">Recent Comments</h1>
-		<?php
+        <aside>
+                <h1 class="widget-title">Recent Comments</h1>
+                <?php
 			display_recent_comments();
-		?>
-	</aside>
+                ?>
+        </aside>
 
-</div>

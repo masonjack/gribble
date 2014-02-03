@@ -34,6 +34,9 @@
 		<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/gribble-scripts.js'></script>
 	</head>
 	<body <?php body_class(); ?>>
+		<div class="narrow-menu">
+			
+		</div>
 		<div id="page" class="hfeed site">
 			<header class="banner">
 				<div class="banner-text-holder">

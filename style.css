@@ -11,7 +11,7 @@ Tags: TBA
 
 Licensed under the GPL. You couldn't steal it if you wanted to
 */
-
+/*
 @-ms-viewport {
         width: device-width;
 }
@@ -19,7 +19,7 @@ Licensed under the GPL. You couldn't steal it if you wanted to
 @viewport {
         width: device-width;
 }
-
+*/
 body {
 	font: normal normal 14px/1.8em 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
 	background-color: #333333;
@@ -29,6 +29,15 @@ body {
 a {
 	text-decoration: none;
 	color: black;
+	
+}
+
+a:hover {
+	color: #cda4ef;
+}
+
+.narrow-menu {
+	display: none;
 }
 
 .site {
@@ -60,6 +69,7 @@ a {
 .banner {
 	height: 410px;
 	background-image: url(images/toilet_greyscale_410px.png);
+	background-position:center; 
 }
 
 .banner-text-holder {
@@ -115,4 +125,11 @@ article.post {
         font-weight: bold;
         color: #798B9C;
 	font-size: 12px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+	.narrow-menu {
+		display: block;
+	}
 }
