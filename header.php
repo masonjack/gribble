@@ -29,7 +29,9 @@
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
 		<?php wp_head(); ?>
-		<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/scripts/respond.min.js'></script>
+		<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/jquery-1.11.0.min.js'></script>
+		<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/respond.min.js'></script>
+		<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/gribble-scripts.js'></script>
 	</head>
 	<body <?php body_class(); ?>>
 		<div id="page" class="hfeed site">
